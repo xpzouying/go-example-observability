@@ -59,6 +59,8 @@ flowchart LR
 
 Redis、MySQL 的依赖环境使用 docker-compose 启动，
 
+启动 Redis Server，
+
 ```bash
 cd docker-compose/redis
 
@@ -68,3 +70,16 @@ docker-compose up -d
 # 查看日志
 docker-compose logs -f
 ```
+
+启动 MySQL Server，
+
+```bash
+cd docker-compose/mysql
+
+# 启动 mysql
+docker-compose up -d
+
+# 查看日志
+docker-compose logs -f
+```
+
