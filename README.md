@@ -19,26 +19,28 @@
 
 flowchart LR
     subgraph Jaeger
-      JaegerCollector --> ElasticSearch
+      JC[Jaeger Collector] --> ES[ElasticSearch]
     end
 
-    subgraph SERVICE
-      gateway --(HTTP Request)--> backend
+    subgraph Services
+      GW[Gateway] -->|HTTP| BE[Backend]
     end
 
     subgraph Deps
-      redis
+      R[Auth Token / Redis]
 
-      mysql
+      M[User Infos / MySQL]
     end
 
-    client --(HTTP Request)--> gateway
+    C[Client] --> |HTTP| GW
 
-    gateway --> redis[(Auth Token / Redis)]
-    gateway --> JaegerCollector
+    GW --> R
 
-    backend --> mysql[(UserInfos / MySQL)]
-    backend --> JaegerCollector
+    GW --> JC
+
+    BE --> M
+    BE --> JC
+
 ```
 
 该实例包含下列几部分：
