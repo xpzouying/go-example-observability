@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+
+  redis:
+    image: redis
+    container_name: redis
+    restart: always
+    ports:
+      - "16379:6379"
+    volumes:
+      - ./container-data:/data
+      - ./container-config:/config
+      - /etc/localtime:/etc/localtime:ro
+
+    entrypoint: redis-server --appendonly yes --loglevel warning
