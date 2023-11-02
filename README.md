@@ -2,7 +2,7 @@
 
 使用 Go 演示一个可观测性项目。
 
-## 技术栈
+## 1. 技术栈
 
 - Go
   - Gin 提供 HTTP Server
@@ -13,7 +13,7 @@
 - Docker 解决依赖问题
 
 
-## 实例架构
+## 2. 实例架构
 
 ```mermaid
 
@@ -51,3 +51,35 @@ flowchart LR
    2. backend: 业务处理层。在我们的示例代码中会访问 MySQL 数据库获取用户的信息。
 3. Jaeger 集群：我们的 metrics 数据就放在这里。
 4. Deps：第三方依赖组件，示例中会演示常用的组件 MySQL 和 Redis，这些组件的特点是组件内部对于我们来说是黑盒，我们无法修改组件来增加可观测性的指标。（有的组件可能支持可观测性的插件）
+
+
+## 3. 部署
+
+### 3.1 依赖部署
+
+Redis、MySQL 的依赖环境使用 docker-compose 启动，
+
+启动 Redis Server，
+
+```bash
+cd docker-compose/redis
+
+# 启动 redis
+docker-compose up -d
+
+# 查看日志
+docker-compose logs -f
+```
+
+启动 MySQL Server，
+
+```bash
+cd docker-compose/mysql
+
+# 启动 mysql
+docker-compose up -d
+
+# 查看日志
+docker-compose logs -f
+```
+
