@@ -2,6 +2,7 @@
 
 根据官方的教程，使用 docker-compose 安装日志服务的组件，[参考资料](https://grafana.com/docs/loki/latest/setup/install/docker/)。
 
+* 参考资料：https://github.com/noris-network/loki-demo/tree/master
 
 ## 使用 docker-compose 部署日志系统
 
