@@ -9,7 +9,7 @@
 - 可观测性
   - metrics: Promethues, Grafana
   - trace: Jaeger, ElasticSearch
-  - logging: Elastic Stack
+  - logging: [Grafana loki](https://grafana.com/docs/loki/latest/), Elastic Stack
 - Docker 解决依赖问题
 
 
