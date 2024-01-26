@@ -83,3 +83,8 @@ docker-compose up -d
 docker-compose logs -f
 ```
 
+# 4. 参考资料
+
+- [夜莺监控](https://n9e.github.io/zh/) - 升级您的 Prometheus + AlertManager + Grafana 到 Nightingale
+
+
