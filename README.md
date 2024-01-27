@@ -87,4 +87,5 @@ docker-compose logs -f
 
 - [夜莺监控](https://n9e.github.io/zh/) - 升级您的 Prometheus + AlertManager + Grafana 到 Nightingale
 
+- [【系统设计】指标监控和告警系统](https://www.cnblogs.com/myshowtime/p/16445208.html)
 
